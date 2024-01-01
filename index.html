@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novbar Design Using HTML & CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h3 class="logo">Dashoboard</h3>
+        <ul id="navMenu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Service </li>
+            <li>Contact</li>
+        </ul>
+        <img src="img/profile.png" alt="profile-picture" class="user-profile" onclick="toggleMenu()">
+        
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="img/profile.png" alt="Profile_images">
+                    <h3>Asfakur Nariz</h3>
+                </div>
+                <hr>
+                <a href="#" class="sub-menu-links">
+                    <img src="img/edit.png" alt="Edit-profile">
+                    <p>Edit Profile</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-links">
+                    <img src="img/notification.png" alt="Edit-profile">
+                    <p>Notification</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-links">
+                    <img src="img/question.png" alt="Edit-profile">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-links">
+                    <img src="img/cogwheel.png" alt="Edit-profile">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-links">
+                    <img src="img/logout.png" alt="Edit-profile">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+        <div class="hamburger">
+            <img src="img/menu.png" alt="" onclick="toggleSubMenu()">
+        </div>
+    </nav>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        let navMenu = document.getElementById("navMenu");
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+            
+        }
+        function toggleSubMenu(){
+            navMenu.classList.toggle("nav-menu");
+        }
+    </script>
+    
+</body>
+</html>
